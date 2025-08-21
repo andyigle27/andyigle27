@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Ejecutar Banco Personal",
+            "type": "python",
+            "request": "launch",
+            "program": "${COSITAS}/Banco_Personal.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}
