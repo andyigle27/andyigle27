@@ -1,6 +1,6 @@
 ## Hi there 👋
 # 💫 About Me:
-🔭 I’m currently working on my programing skilss<br>🌱 I’m currently learning Python and C++<br>
+🔭 I’m currently working on my programing skills<br>🌱 I’m currently learning Python and C++<br>
 
 
 ## 🌐 Socials:
