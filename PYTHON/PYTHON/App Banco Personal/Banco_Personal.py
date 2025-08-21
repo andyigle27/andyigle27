@@ -1,21 +1,37 @@
-
-def menu_principal():
-    print('---------------------------------')
-    print('       [ BANCO PERSONAL ]        ')
-    print('---------------------------------')
-    print('Saldo total: $')
-    print('---------------------------------')
-    print('1) 💰 Cuenta Personal')
-    print('2) 👥 Préstamos')
-    print('3) 📈 Cuenta Luis')
-    print('4) 💼 Sueldo')
-    print('5) 🔄 Movimientos Terceros')
-    print('6) ❌ Salir')
-    print('---------------------------------')
-
-class CuentaPersonal:
+class AppBancoPersonal:
     def __init__(self, saldo):
-        self.saldo = saldo
+        self.saldo = saldo  
+        
+    def menu_principal(self):
+        print('---------------------------------')
+        print('       [ BANCO PERSONAL ]        ')
+        print('---------------------------------')
+        print(f'Saldo total: ${self.saldo}')
+        print('---------------------------------')
+        print('1) 💰 Cuenta Personal')
+        print('2) 👥 Préstamos')
+        print('3) 📈 Cuenta Luis')
+        print('4) 💼 Sueldo')
+        print('5) 🔄 Movimientos Terceros')
+        print('6) ❌ Salir')
+        print('---------------------------------')
+        choice = input('--> ')
+        while choice not in ['1', '2', '3', '4', '5', '6']:
+         print("Opción no válida. Intente de nuevo.")
+         choice = input('--> ')
+        match choice:
+         case '1':  # Ejemplo de saldo inicial
+             self.mostrar_info()
+         case '2':
+             pass  # Aquí iría la lógica de préstamos
+         case '3':
+             pass  # Aquí iría la lógica de cuenta Luis
+         case '4':
+             pass  # Aquí iría la lógica de sueldo
+         case '5':
+             pass  # Aquí iría la lógica de movimientos terceros
+         case '6':
+             print("Gracias por usar el Banco Personal. ¡Hasta luego!")
 
     def mostrar_info(self):
         print('---------------------------------')
@@ -32,7 +48,7 @@ class CuentaPersonal:
         elif sub_choice == '2':
             self.retirar()
         elif sub_choice == '3':
-            menu_principal()
+            self.menu_principal()
         else:
             print("Opción no válida. Intente de nuevo.")
             self.mostrar_info()
@@ -67,30 +83,9 @@ class CuentaPersonal:
             self.saldo -= monto
             print(f'Se han retirado ${monto} de su cuenta.')
             self.mostrar_info()
-            
-        
-menu_principal()
-choice = input('--> ')
-if choice == '1':
-    cuenta = CuentaPersonal(0.0)
-    cuenta.mostrar_info()
-elif choice == '2':
-    pass  # prestamos()
-elif choice == '3':
-    pass  # cuenta_luis()
-elif choice == '4':
-    pass  # sueldo()
-elif choice == '5':
-    pass  # movimientos_terceros()
-else:
-    print("Opción no válida. Intente de nuevo.")
-    menu_principal()
-    
 
-
-
-
-
+cuenta_luis = AppBancoPersonal(75000)
+cuenta_luis.menu_principal()
 
 
 
