@@ -1,6 +1,7 @@
 ## Hi there 👋
 # 💫 About Me:
-🔭 I’m currently working on my programing skills<br>🌱 I’m currently learning Python and C++<br>
+Passionate about learning programming and solving problems with code. Practicing with Python and starting with C++. I enjoy logic challenges, practical applications, and improving step by step.
+
 
 
 ## 🌐 Socials:
