@@ -20,8 +20,8 @@ class AppBancoPersonal:
          print("Opción no válida. Intente de nuevo.")
          choice = input('--> ')
         match choice:
-         case '1':  # Ejemplo de saldo inicial
-             self.mostrar_info()
+         case '1':
+             self.cuenta_personal()
          case '2':
              pass  # Aquí iría la lógica de préstamos
          case '3':
@@ -33,11 +33,11 @@ class AppBancoPersonal:
          case '6':
              print("Gracias por usar el Banco Personal. ¡Hasta luego!")
 
-    def mostrar_info(self):
+    def cuenta_personal(self):
         print('---------------------------------')
         print('       [ CUENTA PERSONAL ]      ')
         print('---------------------------------')
-        print(f'Saldo: ${self.saldo}')
+        print(f'Saldo bancario: ${self.saldo}')
         print('---------------------------------')
         print('1) Depositar')
         print('2) Retirar')
@@ -84,8 +84,9 @@ class AppBancoPersonal:
             print(f'Se han retirado ${monto} de su cuenta.')
             self.mostrar_info()
 
-cuenta_luis = AppBancoPersonal(75000)
-cuenta_luis.menu_principal()
+        
+        
+
 
 
 
