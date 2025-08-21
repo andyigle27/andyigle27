@@ -1,5 +1,4 @@
 ## Hi there 👋
-# BarSoapAng
 # 💫 About Me:
 🔭 I’m currently working on my programing skilss<br>🌱 I’m currently learning Python and C++<br>
 
