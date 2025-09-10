@@ -1,7 +1,9 @@
 class AppBancoPersonal:
-    def __init__(self, saldo):
-        self.saldo = saldo  
-        
+    def __init__(self, nombre, saldo):
+        self.nombre = nombre
+        self.saldo = saldo
+        self.usuarios = []
+
     def menu_principal(self):
         print('---------------------------------')
         print('       [ BANCO PERSONAL ]        ')
@@ -32,6 +34,7 @@ class AppBancoPersonal:
              pass  # Aquí iría la lógica de movimientos terceros
          case '6':
              print("Gracias por usar el Banco Personal. ¡Hasta luego!")
+             pass
 
     def cuenta_personal(self):
         print('---------------------------------')
@@ -51,7 +54,8 @@ class AppBancoPersonal:
             self.menu_principal()
         else:
             print("Opción no válida. Intente de nuevo.")
-            self.mostrar_info()
+            self.cuenta_personal()
+            pass
 
     def depositar(self):
         print('---------------------------------')
@@ -65,7 +69,8 @@ class AppBancoPersonal:
         else:
             self.saldo += monto
             print(f'Se han depositado ${monto} en su cuenta.')
-            self.mostrar_info()
+            self.cuenta_personal()
+            pass
 
     def retirar(self):
         print('---------------------------------')
@@ -82,11 +87,21 @@ class AppBancoPersonal:
         else:
             self.saldo -= monto
             print(f'Se han retirado ${monto} de su cuenta.')
-            self.mostrar_info()
+            self.cuenta_personal()
+            pass
 
-        
-        
+luis_app = AppBancoPersonal("Banco Personal", 5000000)
+luis_app.menu_principal()
 
-
-
-
+def maxProfit(self, prices):
+    buy = min(prices)
+    daybuy = prices.index(buy)
+    if daybuy == len(prices):
+        profit = 0
+    else:
+        sell = prices[buy]
+        for i in range(daybuy, len(prices)):
+            if prices[i] > sell
+           sell = prices[i]
+        profit = sell - buy
+        return profit
